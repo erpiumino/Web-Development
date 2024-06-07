@@ -1,0 +1,255 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?gw23tn');
+  src:  url('fonts/icomoon.eot?gw23tn#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?gw23tn') format('truetype'),
+    url('fonts/icomoon.woff?gw23tn') format('woff'),
+    url('fonts/icomoon.svg?gw23tn#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.scicon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.scicon-im:before {
+  content: "\e901";
+}
+.scicon-int:before {
+  content: "\e902";
+}
+.scicon-oint:before {
+  content: "\e903";
+}
+.scicon-prod:before {
+  content: "\e904";
+}
+.scicon-real:before {
+  content: "\e905";
+}
+.scicon-sum:before {
+  content: "\e906";
+}
+.scicon-Tavola-disegno-9:before {
+  content: "\e907";
+}
+.scicon-trasp-matrix:before {
+  content: "\e908";
+}
+.scicon-iint:before {
+  content: "\e900";
+}
+.scicon-airplane:before {
+  content: "\e9af";
+}
+.scicon-switch:before {
+  content: "\e9b6";
+}
+.scicon-power-cord:before {
+  content: "\e9b7";
+}
+.scicon-clipboard:before {
+  content: "\e9b8";
+}
+.scicon-list-numbered:before {
+  content: "\e9b9";
+}
+.scicon-cloud:before {
+  content: "\e9c1";
+}
+.scicon-cloud-download:before {
+  content: "\e9c2";
+}
+.scicon-cloud-upload:before {
+  content: "\e9c3";
+}
+.scicon-cloud-check:before {
+  content: "\e9c4";
+}
+.scicon-download2:before {
+  content: "\e9c5";
+}
+.scicon-upload2:before {
+  content: "\e9c6";
+}
+.scicon-download3:before {
+  content: "\e9c7";
+}
+.scicon-upload3:before {
+  content: "\e9c8";
+}
+.scicon-sphere:before {
+  content: "\e9c9";
+}
+.scicon-earth:before {
+  content: "\e9ca";
+}
+.scicon-link:before {
+  content: "\e9cb";
+}
+.scicon-attachment:before {
+  content: "\e9cd";
+}
+.scicon-eye:before {
+  content: "\e9ce";
+}
+.scicon-eye-plus:before {
+  content: "\e9cf";
+}
+.scicon-eye-minus:before {
+  content: "\e9d0";
+}
+.scicon-eye-blocked:before {
+  content: "\e9d1";
+}
+.scicon-bookmark:before {
+  content: "\e9d2";
+}
+.scicon-bookmarks:before {
+  content: "\e9d3";
+}
+.scicon-sun:before {
+  content: "\e9d4";
+}
+.scicon-contrast:before {
+  content: "\e9d5";
+}
+.scicon-brightness-contrast:before {
+  content: "\e9d6";
+}
+.scicon-star-empty:before {
+  content: "\e9d7";
+}
+.scicon-cross:before {
+  content: "\ea0f";
+}
+.scicon-checkmark:before {
+  content: "\ea10";
+}
+.scicon-checkmark2:before {
+  content: "\ea11";
+}
+.scicon-enter:before {
+  content: "\ea13";
+}
+.scicon-exit:before {
+  content: "\ea14";
+}
+.scicon-command:before {
+  content: "\ea4e";
+}
+.scicon-omega:before {
+  content: "\ea66";
+}
+.scicon-sigma:before {
+  content: "\ea67";
+}
+.scicon-pilcrow:before {
+  content: "\ea73";
+}
+.scicon-section:before {
+  content: "\ea76";
+}
+.scicon-embed2:before {
+  content: "\ea80";
+}
+.scicon-terminal:before {
+  content: "\ea81";
+}
+.scicon-share2:before {
+  content: "\ea82";
+}
+.scicon-amazon:before {
+  content: "\ea87";
+}
+.scicon-google:before {
+  content: "\ea88";
+}
+.scicon-facebook:before {
+  content: "\ea90";
+}
+.scicon-facebook2:before {
+  content: "\ea91";
+}
+.scicon-instagram:before {
+  content: "\ea92";
+}
+.scicon-whatsapp:before {
+  content: "\ea93";
+}
+.scicon-spotify:before {
+  content: "\ea94";
+}
+.scicon-telegram:before {
+  content: "\ea95";
+}
+.scicon-twitter:before {
+  content: "\ea96";
+}
+.scicon-youtube2:before {
+  content: "\ea9e";
+}
+.scicon-twitch:before {
+  content: "\ea9f";
+}
+.scicon-dribbble:before {
+  content: "\eaa7";
+}
+.scicon-steam:before {
+  content: "\eaac";
+}
+.scicon-steam2:before {
+  content: "\eaad";
+}
+.scicon-github:before {
+  content: "\eab0";
+}
+.scicon-tux:before {
+  content: "\eabd";
+}
+.scicon-appleinc:before {
+  content: "\eabe";
+}
+.scicon-finder:before {
+  content: "\eabf";
+}
+.scicon-android:before {
+  content: "\eac0";
+}
+.scicon-soundcloud:before {
+  content: "\eac3";
+}
+.scicon-reddit:before {
+  content: "\eac6";
+}
+.scicon-linkedin:before {
+  content: "\eac9";
+}
+.scicon-linkedin2:before {
+  content: "\eaca";
+}
+.scicon-stackoverflow:before {
+  content: "\ead0";
+}
+.scicon-paypal:before {
+  content: "\ead8";
+}
+.scicon-chrome:before {
+  content: "\ead9";
+}
+.scicon-safari:before {
+  content: "\eadd";
+}
