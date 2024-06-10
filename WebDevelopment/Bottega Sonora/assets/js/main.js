@@ -197,4 +197,37 @@ AOS.init();
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+
 })();
+
+
+const translation = {
+  en:{
+    index_upper_text : "We are" ,
+    index_lower_text : "A contemporary music Ensemble. Composers and musicians, togheter." ,
+  },
+  it:{
+    index_upper_text : "Noi siamo" ,
+    index_lower_text : "Un Ensemble di musica contemporanea. Compositori ed esecutori, insieme." ,
+  }
+}
+
+const languageSelector = document.getElementById("leng")
+let index_upper_text = document.getElementById("index_upper_text")
+let index_lower_text = document.getElementById("index_lower_text")
+
+
+languageSelector.addEventListener("change", (event) => {
+  setLanguage(event.target.value)
+})
+
+const setLanguage = (language) =>{
+  if(language == en){
+    index_upper_text.innerText = translation.en.index_upper_text
+    index_lower_text.innerText = translation.en.index_lower_text
+  }
+  if(language == it){
+    index_upper_text.innerText = translation.it.index_upper_text
+    index_lower_text.innerText = translation.it.index_lower_text
+  }
+}
