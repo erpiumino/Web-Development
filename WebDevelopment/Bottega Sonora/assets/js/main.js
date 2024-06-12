@@ -7,6 +7,8 @@
 */
 AOS.init();
 
+console.log('Before everything');
+
 
 (function() {
   "use strict";
@@ -24,43 +26,45 @@ AOS.init();
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
 
-  /**
-   * Mobile nav toggle
-   */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+/**
+ * Mobile nav toggle
+ */
+const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+const sidebar = document.querySelector('#sidebar');
 
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
-  }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+function mobileNavToggle() {
+  document.body.classList.toggle('mobile-nav-active');
+  sidebar.classList.toggle('sidebar-active');
+  mobileNavToggleBtn.classList.toggle('bi-list');
+  mobileNavToggleBtn.classList.toggle('bi-x');
+}
+mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
-    });
-
+/**
+ * Hide mobile nav on same-page/hash links
+ */
+document.querySelectorAll('#navmenu a').forEach(navmenu => {
+  navmenu.addEventListener('click', () => {
+    if (document.body.classList.contains('mobile-nav-active')) {
+      mobileNavToggle();
+    }
   });
+});
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      if (document.querySelector('.mobile-nav-active')) {
-        e.preventDefault();
-        this.parentNode.classList.toggle('active');
-        this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-        e.stopImmediatePropagation();
-      }
-    });
+/**
+ * Toggle mobile nav dropdowns
+ */
+document.querySelectorAll('.navmenu .toggle-dropdown').forEach(dropdownToggle => {
+  dropdownToggle.addEventListener('click', function(e) {
+    if (document.body.classList.contains('mobile-nav-active')) {
+      e.preventDefault();
+      this.classList.toggle('active');
+      this.nextElementSibling.classList.toggle('dropdown-active');
+      e.stopImmediatePropagation();
+    }
   });
+});
+
 
   /**
    * Preloader
@@ -199,35 +203,3 @@ AOS.init();
 
 
 })();
-
-
-const translation = {
-  en:{
-    index_upper_text : "We are" ,
-    index_lower_text : "A contemporary music Ensemble. Composers and musicians, togheter." ,
-  },
-  it:{
-    index_upper_text : "Noi siamo" ,
-    index_lower_text : "Un Ensemble di musica contemporanea. Compositori ed esecutori, insieme." ,
-  }
-}
-
-const languageSelector = document.getElementById("leng")
-let index_upper_text = document.getElementById("index_upper_text")
-let index_lower_text = document.getElementById("index_lower_text")
-
-
-languageSelector.addEventListener("change", (event) => {
-  setLanguage(event.target.value)
-})
-
-const setLanguage = (language) =>{
-  if(language == en){
-    index_upper_text.innerText = translation.en.index_upper_text
-    index_lower_text.innerText = translation.en.index_lower_text
-  }
-  if(language == it){
-    index_upper_text.innerText = translation.it.index_upper_text
-    index_lower_text.innerText = translation.it.index_lower_text
-  }
-}
