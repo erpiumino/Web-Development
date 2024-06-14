@@ -453,6 +453,7 @@ h6 {
     /*
     background: rgba(33, 37, 41, 0.417);
     */
+    height: 50px;
     transition: 0.3s;
   }
 
@@ -863,8 +864,8 @@ h6 {
 --------------------------------------------------------------*/
 section,
 .section {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: white;
+  background-color: var(--heading-color);
   padding: 60px 0;
   scroll-margin-top: 100px;
   overflow: clip;
@@ -1057,6 +1058,14 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+#about-container h3, #about-container h5{
+  color: var(--accent-color);
+}
+
+#about-container{
+  border-left: 1px solid var(--accent-color);
+}
+
 .about .content h3 {
   font-size: 2rem;
   font-weight: 700;
@@ -1114,6 +1123,77 @@ section,
 #about{
   margin-top: 450px;
 }
+
+/*--------------------------------------------------------------
+# Gallery Section
+--------------------------------------------------------------*/
+.gallery {
+  overflow: hidden;
+}
+
+#gallery{
+  padding-right: 120px;
+  padding-left: 120px;
+}
+
+@media (max-width:1000px){
+  #gallery{
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
+.swiper-wrapper {
+  height: auto;
+}
+
+.swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--default-color);
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+.swiper-slide-active {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .gallery .swiper-wrapper {
+    padding: 40px 0;
+  }
+
+  .gallery .swiper-slide-active {
+    background: var(--default-color);
+    border: 6px solid var(--accent-color);
+    padding: 4px;
+    z-index: 1;
+    transform: scale(1.2);
+    transition: none;
+  }
+}
+
+/* Gradient overlay */
+.gallery-slider .swiper-slide::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  pointer-events: none;
+}
+
 
 
 /*--------------------------------------------------------------
@@ -1179,7 +1259,7 @@ section,
 --------------------------------------------------------------*/
 .services .service-item {
   text-align: center;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 85%);
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
   height: 100%;
@@ -1220,6 +1300,7 @@ section,
   font-weight: 700;
   margin: 10px 0 15px 0;
   font-size: 22px;
+  color: var(--accent-color);
 }
 
 .services .service-item p {
@@ -1741,11 +1822,16 @@ section,
   }
 }
 
+.swiper-wrapper img{
+  width: 100%;
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
+  height: 100%;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
@@ -2422,29 +2508,26 @@ body.scrolled .header{
 
 .sidebar {
   display: none;
+  float: right;
+  padding-top: 50px;
+  position: fixed;
   top: 0;
+  float: right;
   right: -250px; /* Initially hide sidebar off the screen */
   width: 250px;
   height: 100%;
-  background-color: #333;
+  background-color: #21252A;
   color: white;
-  transition: right 0.3s ease; /* Smooth transition for left property */
-  z-index: 1000;
+  transition: right 0.3s ease; /* Smooth transition for right property */
 }
 
-.sidebar-active{
+.sidebar-active {
   display: flex;
   float: right;
-  position: inherit;
   top: 0;
   right: 0; /* Show sidebar by moving it to the left */
   padding-top: 50px;
-  background-color: RGBA(var(--bs-dark-rgb), var(--bs-bg-opacity, 1)) !important;
-  transition: 0.3s;
-}
-
-.trans {
-  right: 0; /* Show sidebar by moving it to the left */
+  transition: left 0.3s ease; /* Smooth transition for right property */
 }
 
 
@@ -2481,5 +2564,100 @@ body.scrolled .header{
 @media (min-width:1199px){
   .sidebar-active{
     display: none;
+  }
+}
+
+.sidebar ul .btn-active, .sidebar .language-btn:hover{
+  font-weight: 600;
+}
+
+.sidebar .active{
+  background-color: var(--accent-color)!important;
+}
+
+#sidebar-menu a:hover{
+  background-color:var(--accent-color)!important;
+  color: white!important;
+}
+
+.sidebar ul{
+  cursor: pointer;
+}
+
+
+/*=========================Repertoire=========================*/
+
+.sortable-table{
+  width: 100%;
+  max-width: 100%;
+}
+
+.sortable-table tr{
+  border: 2px solid white;
+  /*
+  background-color: green;
+  */
+}
+
+td, th{
+  padding: 20px;
+  font-size: 18px;
+}
+
+.sortable-table thead th {
+  cursor: pointer
+}
+
+.sortable-table th, .table-header td{
+  font-weight: 600;
+}
+
+.sortable-table thead th:after {
+  padding-left: 7px
+}
+
+.sortable-table thead th[data-sort-direction="0"]:after {
+  content: " \0335"
+}
+
+.sortable-table thead th[data-sort-direction="1"]:after {
+  content: "\23F7"
+}
+
+.sortable-table thead th[data-sort-direction="-1"]:after {
+  content: "\23F6"
+}
+
+.sortable-table.sortable-fa-icons thead th[data-sort-direction="0"]:after {
+  content: "\f0dc"
+}
+
+.sortable-table.sortable-fa-icons thead th[data-sort-direction="1"]:after {
+  content: "\f0de"
+}
+
+.sortable-table.sortable-fa-icons thead th[data-sort-direction="-1"]:after {
+  content: "\f0dd"
+}
+
+table td, table th{ 
+  border-left: 2px solid white; 
+}
+
+tr:nth-child(even){
+  background-color: #444444;
+}
+
+tr a{
+  font-weight: 500;
+}
+
+@media (max-width: 761px){
+  td, th{
+    padding: 2px;
+    font-size: 14px;
+  }
+  td:nth-child(5){
+    display:none;
   }
 }
