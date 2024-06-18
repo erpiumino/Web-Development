@@ -2661,3 +2661,11 @@ tr a{
     display:none;
   }
 }
+
+.details i{
+  font-style: normal;
+}
+
+.team-singole{
+  margin-bottom: 20px;
+}

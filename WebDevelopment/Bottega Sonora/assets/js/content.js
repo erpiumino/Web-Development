@@ -49,11 +49,32 @@ function setLanguage(language) {
             'team-filter-musician' : 'Musician',
             'team-filter-composer' : 'Composer',
             'team-filter-staff' : 'Staff',
-            'team-role-clarinetist' : 'Clarinetist',
+            'team-role-clarinetist': 'Clarinetist',
             'team-role-percussionist' : 'Percussionist',
             'team-role-composer' : 'Composer',
             'team-role-cellist' : 'Cellist',
-            'team-role-composer/cellist' : 'Composer/Cellist',
+            'team-role-flautist' : 'Flautist',
+            'team-role-harpist' : 'Harpist',
+            'team-role-violinist' : 'Violinist',
+            'team-role-saxophonist' : 'Saxophonist',
+            'team-role-pianist' : 'Pianist',
+            'team-role-violist' : 'Violist',
+            'team-role-general-manager' : 'General Manager',
+            'team-role-designer' : 'Designer',
+            'team-role-developer' : 'Developer',
+            'team-role-artistic-director' : 'Artistic Director',
+            //============================================Team(Personal Page)============================================//
+            'team-pp-info' : 'Personal Info',
+            'team-pp-birthday' : 'Birthday',
+            'team-pp-role' : 'Role',
+            'team-pp-degree' : 'Degree',
+            'team-pp-date' : 'Member since',
+            'team-pp-resume' : 'Resume',
+            'team-pp-contact' : 'Contact',
+            'team-pp-luca-giuliani-1' : "Born in L'Aquila in 1997, in 2017 he graduated brilliantly in clarinet from the 'A.Casella' conservatory in L'Aquila under the guidance of Maestro Lee YinNigh. He subsequently obtained a level II academic diploma in 'Special Instruments chamber music - clarinet' with 110 cum laude under the guidance of Maestro Roberto Petrocchi at the “A.Casella” music conservatory. He took part in high-level masterclasses in clarinet held by masters Fabrizio Meloni, Calogero Palermo, Peter Szucs, Simone Nicoletta, Angelo De Angelis, Gianmarco Casani, Gianluca Sulli, Marge Loharu.",
+            'team-pp-luca-giuliani-2' : "He has participated in and won national and international competitions such as the “VIII Città di Greci Trophy Competition”, the “Giovani Musicians” of Rome, “XV International Competition P. Barrasso”, “IV National Competition “Urania”, “IX Competition Marco Dall’Aquila”. In 2015 she formed the chamber duo “Giuliani-Rizzuto” performing in various events and competitions. In October 2016 he performed for the “34th Korea International Music Festival” in South Korea in collaboration with the Seoul Orchestra at the Seoul Art Center hall, Young-in Poeun Art Center and in Suncheon Culture and Art Center. Since 2017 he has collaborated with the musical organization Società dei Concerti “B.Barattelli” participating in numerous projects including the first three editions of the “Youth Culture Experimentation” project.",
+            'team-pp-alfonso-1' : "His passion for music began at a young age but he began his musical studies in 16 years under the guidance of M.Claudio Bollini, and then continuing with M.Lorenzo Polyandrous. During his training years he attended masterclasses held by renowned drummers international such as: Ian Paice, Roberto Gatto, Christian Mayer, Roberto Pistolesi, John B. Arnold.",
+            'team-pp-alfonso-2' : "At 19, in parallel with his drum studies, he began his studies in Classical Percussion at the Casella dell'Aquila conservatory where he graduated brilliantly under the guidance of Maestro Massimo Di Rocco, subsequently with the M.Alessandro Tomassetti and concludes his journey with M.Gianluca Ruggeri with the top marks. He is currently attending the two-year course in the same institute specialization in ensemble music.",
             //============================================About============================================//
             'about-title' : 'About us',
             'about-subtitle-1' : 'OVERVIEW',
@@ -130,11 +151,32 @@ function setLanguage(language) {
             'team-filter-musician' : 'Esecutori',
             'team-filter-composer' : 'Compositori',
             'team-filter-staff' : 'Staff',
-            'team-role-clarinetist' : 'Clarinettista',
+            'team-role-clarinetist': 'Clarinettista',
             'team-role-percussionist' : 'Percussionista',
             'team-role-composer' : 'Compositore',
             'team-role-cellist' : 'Cellista',
-            'team-role-composer/cellist' : 'Compositore/Cellista',
+            'team-role-flautist' : 'Flautista',
+            'team-role-harpist' : 'Arpista',
+            'team-role-violinist' : 'Violinista',
+            'team-role-saxophonist' : 'Sassofonista',
+            'team-role-pianist' : 'Pianista',
+            'team-role-violist' : 'Violista',
+            'team-role-general-manager' : 'General Manager',
+            'team-role-designer' : 'Designer',
+            'team-role-developer' : 'Developer',
+            'team-role-artistic-director' : 'Direttore Artistico',
+            //============================================Team(Personal Page)============================================//
+            'team-pp-info' : 'Informazioni Personali',
+            'team-pp-birthday' : 'Compleanno',
+            'team-pp-role' : 'Ruolo',
+            'team-pp-degree' : 'Qualifica',
+            'team-pp-date' : 'Membro da',
+            'team-pp-resume' : 'Curriculum',
+            'team-pp-contact' : 'Contatto',
+            'team-pp-luca-giuliani-1' : "Nato a L’Aquila nel 1997, nel 2017 si diploma brillantemente in clarinetto presso il conservatorio “A.Casella” di L’Aquila sotto la guida del Maestro Lee YinNigh.Successivamente consegue il diploma accademico di II livello in”Strumenti ad indirizzo cameristico – clarinetto” con 110 e lode sotto la guida del Maestro Roberto Petrocchi presso il conservatorio di musica “A.Casella”.Ha preso parte a Masterclass di alto perfezionamento in clarinetto tenute dai maestri Fabrizio Meloni, Calogero Palermo, Peter Szucs, Simone Nicoletta, Angelo De Angelis, Gianmarco Casani, Gianluca Sulli, Marge Loharu.",
+            'team-pp-luca-giuliani-2' : "Ha partecipato e vinto concorsi nazionali e internazionali quali “VIII Concorso Trofeo Città di Greci”, concorso e rassegna “Giovani Musici” di Roma, “XV concorso Internazionale P.Barrasso”, “IV Concorso Nazionale “Urania”, “IX Concorso Marco Dall’Aquila”.Nel 2015 ha formato il duo cameristico “Giuliani-Rizzuto” esibendosi in varie manifestazioni e concorsi. Nell’Ottobre del  2016 si è esibito per il “34° Korea International Music Festival” in Corea del Sud in collaborazione con la Seul orchestra presso la salla del Seul Art Center, Young-in Poeun Art Center e nel Suncheon Culture and Art Center. Dal 2017 collabora con l’ente musicale Società dei Concerti “B.Barattelli” partecipando in numerosi progetti tra cui le prime tre edizioni del progetto “Sperimentazione Cultura Giovani”." ,
+            'team-pp-alfonso-1' : "La sua passione per la musica nasce sin dalla giovane età ma inizia gli studi musicali a 16 anni sotto la guida del M.Claudio Bollini, per poi proseguire con il M.Lorenzo Poliandri. Durante gli anni di formazione segue masterclass tenute da batteristi di fama internazionale quali: Ian Paice, Roberto Gatto, Christian Mayer, Roberto Pistolesi, John B.Arnold.",
+            'team-pp-alfonso-2' : "A 19 anni parallelamente allo studio della batteria intraprende il percorso di studi in Percussioni Classiche presso il conservatorio Casella dell’Aquila dove si laurea brillantemente sotto la guida del Maestro Massimo Di Rocco, successivamente con il M.Alessandro Tomassetti e conclude il suo percorso con il M.Gianluca Ruggeri con il massimo dei voti. Attualmente frequenta, nel medesimo istituto, il corso biennale di specializzazione in Musica d'insieme.",
             //============================================About============================================//
             'about-title' : 'Su di Noi',
             'about-subtitle-1' : 'PANORAMICA',
@@ -189,75 +231,22 @@ function setLanguage(language) {
     if (currentTexts) {
         console.log(`Updating text elements for language: ${language}`);
 
-        updateTextElement('upper_text', currentTexts['upper_text']);
-        updateTextElement('lower_text', currentTexts['lower_text']);
-        updateTextElement('about2', currentTexts['about2']);
-        updateTextElement('team', currentTexts['team']);
-        updateTextElement('events', currentTexts['events']);
-        updateTextElement('projects', currentTexts['projects']);
-        updateTextElement('repertoire', currentTexts['repertoire']);
-        updateTextElement('contacts', currentTexts['contacts']);
-        updateTextElement('follow', currentTexts['follow']);
-        updateInnerHtmlElement('about-side', currentTexts['about-side']);
-        updateInnerHtmlElement('team-side', currentTexts['team-side']);
-        updateInnerHtmlElement('events-side', currentTexts['events-side']);
-        updateInnerHtmlElement('projects-side', currentTexts['projects-side']);
-        updateInnerHtmlElement('repertoire-side', currentTexts['repertoire-side']);
-        updateInnerHtmlElement('contacts-side', currentTexts['contacts-side']);
-        updateInnerHtmlElement('follow-side', currentTexts['follow-side']);
-        updateInnerHtmlElement('team-title', currentTexts['team-title']);
-        updateInnerHtmlElement('team-subtitle', currentTexts['team-subtitle']);
-        updateInnerHtmlElement('team-filter-musician', currentTexts['team-filter-musician']);
-        updateInnerHtmlElement('team-filter-composer', currentTexts['team-filter-composer']);
-        updateInnerHtmlElement('team-filter-staff', currentTexts['team-filter-staff']);
-        updateInnerHtmlElement('team-filter-all', currentTexts['team-filter-all']);
-        updateInnerHtmlElement('team-role-clarinetist', currentTexts['team-role-clarinetist']);
-        updateInnerHtmlElement('team-role-percussionist', currentTexts['team-role-percussionist']);
-        updateInnerHtmlElement('team-role-composer', currentTexts['team-role-composer']);
-        updateInnerHtmlElement('team-role-cellist', currentTexts['team-role-cellist']);
-        updateInnerHtmlElement('about-title', currentTexts['about-title']);
-        updateInnerHtmlElement('about-subtitle-1', currentTexts['about-subtitle-1']);
-        updateInnerHtmlElement('about-subtitle-2', currentTexts['about-subtitle-2']);
-        updateInnerHtmlElement('about-subsubtitle-1', currentTexts['about-subsubtitle-1']);
-        updateInnerHtmlElement('about-subsubtitle-2', currentTexts['about-subsubtitle-2']);
-        updateInnerHtmlElement('about-subsubtitle-3', currentTexts['about-subsubtitle-3']);
-        updateInnerHtmlElement('about-subsubtitle-4', currentTexts['about-subsubtitle-4']);
-        updateInnerHtmlElement('about-paragraph1.1', currentTexts['about-paragraph1.1']);
-        updateInnerHtmlElement('about-paragraph1.2', currentTexts['about-paragraph1.2']);
-        updateInnerHtmlElement('about-paragraph1.3', currentTexts['about-paragraph1.3']);
-        updateInnerHtmlElement('about-paragraph1.4', currentTexts['about-paragraph1.4']);
-        updateInnerHtmlElement('about-objectives-1', currentTexts['about-objectives-1']);
-        updateInnerHtmlElement('about-objectives-2', currentTexts['about-objectives-2']);
-        updateInnerHtmlElement('about-objectives-3', currentTexts['about-objectives-3']);
-        updateInnerHtmlElement('about-objectives-4', currentTexts['about-objectives-4']);
-        updateInnerHtmlElement('about-bullet-1', currentTexts['about-bullet-1']);
-        updateInnerHtmlElement('about-bullet-2', currentTexts['about-bullet-2']);
-        updateInnerHtmlElement('about-bullet-3', currentTexts['about-bullet-3']);
-        updateInnerHtmlElement('about-bullet-4', currentTexts['about-bullet-4']);
-        updateInnerHtmlElement('about-bullet-title-1', currentTexts['about-bullet-title-1']);
-        updateInnerHtmlElement('about-bullet-title-2', currentTexts['about-bullet-title-2']);
-        updateInnerHtmlElement('about-bullet-title-3', currentTexts['about-bullet-title-3']);
-        updateInnerHtmlElement('about-bullet-title-4', currentTexts['about-bullet-title-4']);
-        updateInnerHtmlElement('footer-top', currentTexts['footer-top']);
-        updateInnerHtmlElement('footer-col-name-1', currentTexts['footer-col-name-1']);
-        updateInnerHtmlElement('footer-col-name-2', currentTexts['footer-col-name-2']);
-        updateInnerHtmlElement('footer-col-name-3', currentTexts['footer-col-name-3']);
-        updateInnerHtmlElement('footer-home', currentTexts['footer-home']);
-        updateInnerHtmlElement('footer-events', currentTexts['footer-events']);
-        updateInnerHtmlElement('footer-team', currentTexts['footer-team']);
-        updateInnerHtmlElement('footer-contacts', currentTexts['footer-contacts']);
-        updateInnerHtmlElement('footer-mail-1', currentTexts['footer-mail-1']);
-        updateInnerHtmlElement('footer-mail-2', currentTexts['footer-mail-2']);
-        updateInnerHtmlElement('footer-mail-3', currentTexts['footer-mail-3']);
-        updateInnerHtmlElement('footer-mail-4', currentTexts['footer-mail-4']);
-        updateInnerHtmlElement('footer-legal-1', currentTexts['footer-legal-1']);
-        updateInnerHtmlElement('footer-legal-2', currentTexts['footer-legal-2']);
-        updateInnerHtmlElement('footer-legal-3', currentTexts['footer-legal-3']);
-        updateInnerHtmlElement('footer-credits', currentTexts['footer-credits']);
-        updateInnerHtmlElement('projects-title', currentTexts['projects-title']);
-        updateInnerHtmlElement('projects-subtitle', currentTexts['projects-subtitle']);
-        updateInnerHtmlElement('projects-description-1', currentTexts['projects-description-1']);
-        updateInnerHtmlElement('projects-description-2', currentTexts['projects-description-2']);
+        // Update elements by ID
+        Object.keys(currentTexts).forEach(id => {
+            updateTextElement(id, currentTexts[id]);
+            updateInnerHtmlElement(id, currentTexts[id]);
+        });
+
+        // Update elements by class
+        const translatableElements = document.querySelectorAll('.translatable');
+        translatableElements.forEach(element => {
+            const key = element.getAttribute('data-key');
+            if (currentTexts[key]) {
+                element.innerHTML = currentTexts[key];
+            } else {
+                console.warn(`No text found for key: ${key}`);
+            }
+        });
 
         // Store selected language in localStorage
         localStorage.setItem('language', language);
