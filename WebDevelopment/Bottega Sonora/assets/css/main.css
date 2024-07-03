@@ -73,11 +73,11 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/BS\ Sfondo.png") center no-repeat;
+  background: #040404 url("../img/LucaSfondo.png") center no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
-  top: 0;
+  bottom: 0;
   height: 100vh;
   z-index: -1;
 }
@@ -2273,75 +2273,6 @@ body.scrolled .header{
   font-weight: 600;
 }
 
-
-/*====================Events=======================*/
-
-.events .section-title{
-  text-align: left;
-}
-
-.events h2{
-  font-size: 30px;
-  margin-bottom: 0;
-}
-
-.events h4{
-  font-size: 20px;
-  color: var(--accent-color);
-  margin-bottom: 0;
-}
-
-.events .row{
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  background-color: none;
-  border-bottom: 1px solid white;
-}
-
-.events .row::before{
-  content: "";
-  position: relative;
-  width: 2px;
-  height: 80px;
-  background: var(--accent-color);
-  border: 2px solid var(--accent-color);
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.events .alt{
-  background-color: #444444;
-}
-
-.alt h2, .alt h4{
-  color: white;
-}
-
-.events .inner{
-  border:none;
-  padding: none;
-  margin: none;
-  margin-left: 20px;
-  width: 96%;
-}
-
-.events .ticket{
-  text-align: end;
-  align-items: center;
-  margin-top: auto;
-  margin-bottom: auto;
-
-}
-.events .col-md-4{
-  border-right: 2px solid white;
-}
-
-.events p{
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
 /*--------------------------------------------------------------
 # Schedule Section
 --------------------------------------------------------------*/
@@ -2363,11 +2294,26 @@ body.scrolled .header{
   margin-bottom: auto;
 }
 
-.tabpanel svg img{
+.tab-pane svg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-pane svg image{
   object-fit: cover;
-  height: 100%;
-  width: 100%;
   transition: all ease-in-out 0.3s;
+  object-position: center;
+}
+
+.tab-pane svg image::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
 }
 
 .schedule .nav-tabs {
@@ -2587,70 +2533,6 @@ body.scrolled .header{
 
 /*=========================Repertoire=========================*/
 
-.sortable-table{
-  width: 100%;
-  max-width: 100%;
-}
-
-.sortable-table tr{
-  border: 2px solid white;
-  /*
-  background-color: green;
-  */
-}
-
-td, th{
-  padding: 20px;
-  font-size: 18px;
-}
-
-.sortable-table thead th {
-  cursor: pointer
-}
-
-.sortable-table th, .table-header td{
-  font-weight: 600;
-}
-
-.sortable-table thead th:after {
-  padding-left: 7px
-}
-
-.sortable-table thead th[data-sort-direction="0"]:after {
-  content: " \0335"
-}
-
-.sortable-table thead th[data-sort-direction="1"]:after {
-  content: "\23F7"
-}
-
-.sortable-table thead th[data-sort-direction="-1"]:after {
-  content: "\23F6"
-}
-
-.sortable-table.sortable-fa-icons thead th[data-sort-direction="0"]:after {
-  content: "\f0dc"
-}
-
-.sortable-table.sortable-fa-icons thead th[data-sort-direction="1"]:after {
-  content: "\f0de"
-}
-
-.sortable-table.sortable-fa-icons thead th[data-sort-direction="-1"]:after {
-  content: "\f0dd"
-}
-
-table td, table th{ 
-  border-left: 2px solid white; 
-}
-
-tr:nth-child(even){
-  background-color: #444444;
-}
-
-tr a{
-  font-weight: 500;
-}
 
 @media (max-width: 761px){
   td, th{
@@ -2668,4 +2550,93 @@ tr a{
 
 .team-singole{
   margin-bottom: 20px;
+}
+
+.event-text{
+  margin-bottom: 20px!important;
+}
+
+.dataTable a{
+  color: var(--accent-color)!important;
+}
+
+.dataTable tr th{
+  font-weight: 500!important;
+  background-color: var(--heading-color)!important;
+  color: white;
+}
+
+.dataTable td {
+    color: white!important;
+    background-color: var(--heading-color);
+}
+
+.dataTables_wrapper .dataTable tbody tr:nth-child(even) {
+  background-color: #f2f2f2 !important;
+}
+
+.dataTables_filter input, .dataTables_filter input:focus {
+  /* Aggiungi qui i tuoi stili personalizzati */
+  background-color: var(--default-color);
+  color: white;
+}
+
+/* Stili per le informazioni di visualizzazione */
+.dataTables_info {
+  /* Aggiungi qui i tuoi stili personalizzati */
+  color: #888;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* Stili per il menu a discesa "Show n entries" */
+.dataTables_length select, .dataTables_length select:focus {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: var(--default-color);
+  color: white;
+}
+
+.page-link{
+  background-color: var(--default-color)!important;
+  color: white!important;
+}
+
+.page-link:hover{
+  background-color: var(--accent-color)!important;
+  border-color: var(--accent-color)!important;
+}
+
+.active .page-link{
+  border-color: var(--accent-color)!important;
+  background-color: var(--accent-color)!important;
+} 
+/*============================Responsive and other stuff============================*/
+
+@media (max-width: 600px){
+  .team-pp-title h2{
+    font-size: 30px!important;
+  }
+  .details .row p{
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 991px){
+  .event-text{
+    margin-bottom: 20px!important;
+    margin-left: 0!important;
+  }
+}
+
+.place-maps{
+  cursor: pointer;
+}
+
+
+@media (max-width: 1200px){
+  .event-img{
+    display: none!important;
+  }
 }
