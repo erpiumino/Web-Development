@@ -265,14 +265,3 @@ function searchFunction() {
   }
 }
 
-
-/* Table sorting */
-
-$(document).ready(function() {
-  $('#sortTable').DataTable({
-    columnDefs: [
-      { orderable: true, targets: [0, 1, 3] }, // Abilita il sorting solo sulle colonne "Name", "Composer", "Year"
-      { orderable: false, targets: [2, 4] }   // Disabilita il sorting sulle colonne "Organic", "Notes"
-    ]
-  });
-});

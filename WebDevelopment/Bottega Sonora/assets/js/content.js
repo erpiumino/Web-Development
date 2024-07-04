@@ -9,10 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             const language = button.id.includes('en') ? 'en' : 'it';
             setLanguage(language);
+            localStorage.setItem('language', language); // Store the selected language in localStorage
         });
     });
-
 });
+
+let dataTableInstance = null; // Variabile globale per memorizzare l'istanza della DataTable
+
+// Funzione per ottenere il nome del file corrente
+function getCurrentPage() {
+    const path = window.location.pathname;
+    return path.split("/").pop();
+}
+
 
 function setLanguage(language) {
     console.log(`Setting language to: ${language}`);
@@ -34,6 +43,7 @@ function setLanguage(language) {
             'projects': 'projects',
             'repertoire': 'repertoire',
             'contacts': 'contacts',
+            'credits': 'Credits',
             'follow': 'FOLLOW US',
             'about-side': '&nbsp About',
             'team-side': '&nbsp Team',
@@ -150,9 +160,28 @@ function setLanguage(language) {
             'repertoire-title' : "Repertoire",
             'repertoire-name' : "Name",
             'repertoire-composer' : "Composer",
-            'repertoire-oragnic' : "Organic",
+            'repertoire-organic' : "Organic",
             'repertoire-year' : "Year",
             'repertoire-notes' : "Notes",
+            'two-flutes' : "Two Flutes",
+            'flute' : "Flute",
+            'clarinet' : "Clarinet",
+            'piano' : "Piano",
+            'vibraphone' : "Vibraphone",
+            'eletronics' : "Eletronics",
+            //============================================Contacts============================================//
+            'contacts-title' : "Get in touch",
+            'contacts-subtext' : "Reach us for commissions, information or more",
+            'contacts-box-title' : "Contact us via email or phone",
+            'contacts-box-text' : "We do not dispose of any physical adress, we are an eco-friendly Ensemble and company. You can leave a message with your name and email, or you can contact one of our staff member, based on your request. We will respond as fast as possible.",
+            'placeholders': {
+                'contacts-form-name': 'Your Name',
+                'contacts-form-mail': 'Your Email',
+                'contacts-form-subject': 'Subject',
+                'contacts-form-message': 'Message',
+                // Aggiungi altri campi del form qui
+            },
+            'contacts-form-send' : "Send Message",
             //============================================Footer============================================//
             'footer-top' : "Back on Top",
             'footer-col-name-1' : "Useful Links",
@@ -171,14 +200,14 @@ function setLanguage(language) {
             'footer-legal-3' : "Credits",
             'footer-credits' : 'Designed and developed with <a class="bi bi-heart-fill"></a> by <a href="https://riccardomordente.com/" target="_blank">Riccardo Mordente</a> using <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>',
             //============================================DataTable============================================//
-            'length_menu': 'Show _MENU_ entries',
+            'sLengthMenu': 'Show _MENU_ entries',
             'info': 'Showing _START_ to _END_ of _TOTAL_ entries',
-            'info_empty': 'Showing 0 to 0 of 0 entries',
-            'info_filtered': '(filtered from _MAX_ total entries)',
+            'sInfoEmpty': 'Showing 0 to 0 of 0 entries',
+            'sInfoFiltered': '(filtered from _MAX_ total entries)',
             'loading_records': 'Loading...',
             'processing': 'Processing...',
             'search': 'Search:',
-            'zero_records': 'No matching records found',
+            'sZeroRecords': 'No matching records found',
             'paginate': {
                 'first': 'First',
                 'last': 'Last',
@@ -188,7 +217,10 @@ function setLanguage(language) {
             'aria': {
                 'sortAscending': ': activate to sort column ascending',
                 'sortDescending': ': activate to sort column descending'
-            }
+            },
+            //============================================Legal============================================//
+            'credits-paragraph1' : 'This site was designed and developed by our Staff member Riccardo Mordente. You can reach him for commissions and information on his webiste <a href="https://riccardomordente.com" target="_blank">riccardomordente.com</a> or with the equivalent mails <a href="mailto:info@riccardomordente.com", target="_blank">info@riccardomordente.com</a>, <a href="mailto:graphic@bsensemble.com", target="_blank">graphic@bsensemble.com</a>.',
+            'credits-paragraph2' : 'The site was optimized with the usage of the Bootstrap library via <a href="https://getbootstrap.com" target="_blank">Boostrap.com</a>. A special thank you to the photographer Tizio Caio who helped us in the realization of professional photos to use in the website.',
         },
 
 
@@ -205,6 +237,7 @@ function setLanguage(language) {
             'projects': 'progetti',
             'repertoire': 'repertorio',
             'contacts': 'contatti',
+            'credits': 'Crediti',
             'follow': 'SEGUICI',
             'about-side': '&nbsp Chi siamo',
             'team-side': '&nbsp Team',
@@ -322,9 +355,28 @@ function setLanguage(language) {
             'repertoire-title' : "Repertorio",
             'repertoire-name' : "Nome",
             'repertoire-composer' : "Compositore",
-            'repertoire-oragnic' : "Organico",
+            'repertoire-organic' : "Organico",
             'repertoire-year' : "Anno",
             'repertoire-notes' : "Note",
+            'two-flutes' : "Due Flauti",
+            'flute' : "Flauto",
+            'clarinet' : "Clarinetto",
+            'piano' : "Pianoforte",
+            'vibraphone' : "Vibrafono",
+            'eletronics' : "Elettronica",
+            //============================================Contacts============================================//
+            'contacts-title' : "Contattaci",
+            'contacts-subtext' : "Entra in contatto con noi per commissioni, informazioni e altro",
+            'contacts-box-title' : "Contattaci via email o telefono",
+            'contacts-box-text' : "Non abbiamo un indirizzo fisico. Siamo una realtà eco-friendly. Puoi lasciare un messaggio di seguito con il tuo nome e la tua mail, oppure contattare il nostro staff dall'apposita mail, in base a ciò che ti serve. Risponderemo quanto prima.",
+            'placeholders': {
+                'contacts-form-name': 'Inserisci il tuo nome',
+                'contacts-form-mail': 'Inserisci la tua email',
+                'contacts-form-subject': 'Oggetto della mail',
+                'contacts-form-message': 'Inserisci il tuo messaggio',
+                // Aggiungi altri campi del form qui
+            },
+            'contacts-form-send' : "Invia il Messaggio",
             //============================================Footer============================================//
             'footer-top' : "Torna su",
             'footer-col-name-1' : "Link Utili",
@@ -343,14 +395,14 @@ function setLanguage(language) {
             'footer-legal-3' : "Crediti",
             'footer-credits' : 'Disegnato e sviluppato con <a class="bi bi-heart-fill"></a> da <a href="https://riccardomordente.com/" target="_blank">Riccardo Mordente</a> con il supporto della libreria <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>',
             //============================================DataTable============================================//
-            'info': 'Mostrando da _START_ a _END_ di _TOTAL_ voci',
-            'info_empty': 'Mostrando 0 a 0 di 0 voci',
-            'info_filtered': '(filtrati da _MAX_ voci totali)',
+            'info': 'Mostrando da _START_ a _END_ di _TOTAL_ elementi',
+            'sInfoEmpty': 'Mostrando 0 a 0 di 0 elementi',
+            'sInfoFiltered': '(filtrati da _MAX_ elementi totali)',
             'loading_records': 'Caricamento...',
             'processing': 'Elaborazione...',
             'search': 'Cerca:',
-            'zero_records': 'Nessun dato trovato',
-            'length_menu': 'Mostra _MENU_ elementi',
+            'sZeroRecords': 'Nessun dato trovato',
+            'sLengthMenu': 'Mostra _MENU_ elementi',
             'paginate': {
                 'first': 'Primo',
                 'last': 'Ultimo',
@@ -360,16 +412,26 @@ function setLanguage(language) {
             'aria': {
                 'sortAscending': ': attiva per ordinare la colonna in ordine crescente',
                 'sortDescending': ': attiva per ordinare la colonna in ordine decrescente'
-            }
+            },
+            //============================================Legal============================================//
+            'credits-paragraph1' : 'Questo sito è stato disegnato e sviluppato dal nostro membro dello staff Riccardo Mordente. Puoi contattarlo per commissioni e informazioni tramite il suo sito <a href="https://riccardomordente.com" target="_blank">riccardomordente.com</a> o tramite le mail equivalenti <a href="mailto:info@riccardomordente.com", target="_blank">info@riccardomordente.com</a>, <a href="mailto:graphic@bsensemble.com", target="_blank">graphic@bsensemble.com</a>.',
+            'credits-paragraph2' : 'Il sito è stato ottimizzato tramite la libreria Bootstrap, che si piò facilmente trovare su <a href="https://getbootstrap.com" target="_blank">Boostrap.com</a>. Un grazie speciale al fotografo Tizio Caio, che ci ha aiutato nella realizzazione degli scatti professionali che sono stati usati nel sito.',
         }
     };
-
-    let dataTableInstance = null; // Variabile globale per memorizzare l'istanza della DataTable
 
     const currentTexts = texts[language];
 
     if (currentTexts) {
         console.log(`Updating text elements for language: ${language}`);
+                // Aggiorna i placeholder del form
+                Object.keys(currentTexts.placeholders).forEach(key => {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        element.setAttribute('placeholder', currentTexts.placeholders[key]);
+                    } else {
+                        console.warn(`Element with ID '${key}' not found.`);
+                    }
+                });
 
         // Update elements by ID
         Object.keys(currentTexts).forEach(id => {
@@ -388,14 +450,21 @@ function setLanguage(language) {
             }
         });
 
-        // Aggiorna le traduzioni della DataTable
-        if ($.fn.DataTable.isDataTable('#sortTable')) {
-            $('#sortTable').DataTable().destroy(); // Distruggi l'istanza precedente della DataTable
-        }
+        // Verifica se siamo su repertoire.html prima di inizializzare DataTable
+        if (getCurrentPage() === 'repertoire.html') {
+            if ($.fn.DataTable.isDataTable('#sortTable')) {
+                $('#sortTable').DataTable().destroy();
+            }
 
-        $('#sortTable').DataTable({
-            "language": currentTexts // Imposta le opzioni di lingua per la DataTable
-        });
+            $('#sortTable').DataTable({
+                "language": currentTexts,
+                columnDefs: [
+                    { orderable: true, targets: [0, 1, 3] },
+                    { orderable: false, targets: [2, 4] }
+                ]
+            });
+        }
+        
 
         // Store selected language in localStorage
         localStorage.setItem('language', language);
@@ -422,3 +491,4 @@ function updateInnerHtmlElement(id, html) {
         console.warn(`Element with ID '${id}' not found.`);
     }
 }
+

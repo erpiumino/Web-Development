@@ -136,14 +136,14 @@
     <section id="speakers" class="portfolio contact">
       <div class="container">
         <div class="container section-title">
-          <h2>Get in Touch</h2>
-          <p>Reach us for commissions, information or more</p>
+          <h2 id="contacts-title">Get in Touch</h2>
+          <p id="contacts-subtext">Reach us for commissions, information or more</p>
         </div>
 
         <div class="container" data-aos="fade-up">
           <div class="row gy-4" style="margin-top: 50px;">
-            <h4 style="color: var(--accent-color);">Contact us via email or phone </h4>
-            <h6 style="color: white;">We do not dispose of any physical adress, we are an eco-friendly Ensemble and
+            <h4 style="color: var(--accent-color);" id="contacts-box-title">Contact us via email or phone </h4>
+            <h6 style="color: white;" id="contacts-box-text">We do not dispose of any physical adress, we are an eco-friendly Ensemble and
               company.
               You can leave a message with your name and email, or you can contact one of our staff member, based on
               your request.
@@ -156,25 +156,25 @@
                 <div class="row gy-4">
 
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="" id="contacts-form-name">
                   </div>
 
                   <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="" id="contacts-form-mail">
                   </div>
 
                   <div class="col-md-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="" id="contacts-form-subject">
                   </div>
 
                   <div class="col-md-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required="" id="contacts-form-message"></textarea>
                   </div>
 
                   <div class="col-md-12 text-center">
                     <div class="loading">Loading</div>
                     <div class="sent-message">Your message has been sent. Thank you!</div>
-                    <button type="submit">Send Message</button>
+                    <button type="submit" id="contacts-form-send">Send Message</button>
                   </div>
 
                 </div>
@@ -184,12 +184,12 @@
             <div class="col-lg-6 col-md-6 option">
               <div class="info-item d-flex row" data-aos="fade-up" data-aos-delay="300">
                 <div class="col-lg-6 info-item option">
-                  <a class="bi bi-person-fill" href="#"></a>
+                  <a class="bi bi-person-fill" href="mailto:manager@bottegasonora.com"></a>
                   <h3>General Manager</h3>
                   <p>manager@bottegasonora.com</p>
                 </div>
                 <div class="col-lg-6 info-item option"> 
-                  <a class="bi bi-music-note" href="#"></a>
+                  <a class="bi bi-music-note" href="mailto:concerts@bottegasonora.com"></a>
                   <h3>Concert Manager</h3>
                   <p>concerts@bottegasonora.com</p>
                 </div>
@@ -197,12 +197,12 @@
 
               <div class="info-item d-flex row" data-aos="fade-up" data-aos-delay="300">
                 <div class="col-lg-6 info-item option">
-                  <a class="bi bi-kanban" href="#"></a>
+                  <a class="bi bi-kanban" href="mailto:projects@bottegasonora.com"></a>
                   <h3>Project Manager</h3>
                   <p>projects@bottegasonora.com</p>
                 </div>
                 <div class="col-lg-6 info-item option"> 
-                  <a class="bi bi-pen-fill" href="#"></a>
+                  <a class="bi bi-pen-fill" href="mailto:graphic@bottegasonora.com"></a>
                   <h3>Graphic Designer</h3>
                   <p>graphic@bottegasonora.com</p>
                 </div>
@@ -255,9 +255,9 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4 id="footer-col-name-2">Legal</h4>
           <ul>
-            <li><a id="footer-legal-1" href="#">Privacy</a></li>
-            <li><a id="footer-legal-2" href="#">Copyright</a></li>
-            <li><a id="footer-legal-3" href="#">Credits</a></li>
+            <li><a id="footer-legal-1" href="Legal/Privacy.html">Privacy</a></li>
+            <li><a id="footer-legal-2" href="Legal/Copyright.html">Copyright</a></li>
+            <li><a id="footer-legal-3" href="Legal/Credits.html">Credits</a></li>
           </ul>
         </div>
 
@@ -306,6 +306,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/content.js" defer></script>
 </body>
 
 </html>
